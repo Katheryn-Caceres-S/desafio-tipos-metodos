@@ -2,9 +2,6 @@ from personaje import Personaje
 import random
 
 
-
-
-
 print("¡Bienvenido a Gran Fantasía!")
 nombre = input("Por favor indique nombre de su personaje:")
 
@@ -22,13 +19,15 @@ while opcion == 1:
     if resultado == "G":
         print("""
 ¡Le has ganado al orco, felicidades!
-¡Recibirás 50 puntos de experiencia!""")
+¡Recibirás 50 puntos de experiencia!
+""")
         personaje.estado = 50
         npc.estado = -30
     else:
         print("""
 ¡Oh no! ¡El orco te ha ganado!
-¡Has perdido 30 puntos de experiencia!""")
+¡Has perdido 30 puntos de experiencia!
+""")
         personaje.estado = -30
         npc.estado = 50
 
@@ -40,7 +39,7 @@ while opcion == 1:
     opcion = Personaje.mostrar_dialogo(prob)
 
 
-print("has huido!!!!")
+print("has huido del Orco!!!!")
 
 
         

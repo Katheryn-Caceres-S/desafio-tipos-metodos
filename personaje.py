@@ -4,11 +4,12 @@ class Personaje:
     def __init__(self, nombre = "orco"):
         # atributos (de instancia) de los personajes
         #harcodeado porque tien valor de inicio
+        #este es el constructor
         self.nombre = nombre
         self.nivel = 1
         self.experiencia = 0
 
-
+    #metodo getter
     @property
     def estado(self):
         return  f"el nombre es : {self.nombre} el nivel es : {self.nivel} la exp es : {self.experiencia}"
@@ -40,6 +41,7 @@ class Personaje:
         # sobrecarga para metodo de menor que implementado para mis instancias
         return self.nivel < oponente.nivel
     
+    #metodo mayor que
     def __gt__(self , oponente):
         # sobrecarga para metodo de mayor que implementado para mis instancias
         return self.nivel > oponente.nivel
@@ -49,13 +51,14 @@ class Personaje:
          return self.nivel == oponente.nivel
     
 
-    def probabilidad(self , oponente):
+    def probabilidad(self, oponente):
         """
         ○ Si el jugador es menor al orco, tiene un 33% de probabilidades de ganar.
         ○ Si el jugador es mayor al orco, tiene un 66% de probabilidades de ganar.
         ○ Si el jugador es igual al orco, tiene un 50% de probabilidades de ganar.
 
         """
+
         if self < oponente:
             return 33
         elif self > oponente:
@@ -73,7 +76,8 @@ Si ganas, ganarás 50 puntos de experiencia y el orco perderá 30.
 Si pierdes, perderás 30 puntos de experiencia y el orco ganará 50.
 ¿Qué deseas hacer?
 1. Atacar
-2. Huir"""))
+2. Huir
+"""))
     
 
 
